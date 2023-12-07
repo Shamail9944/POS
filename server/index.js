@@ -24,11 +24,32 @@ connectDb();
 const app = express();
 
 //middlwares
-app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cors(
+    {
+        origin: "*",
+        credentials: "true",
+        methods: "GET, POST, HEAD, PUT, PATCH, DELETE, OPTIONS",
+        allowedHeaders: 'Content-Type',
+        exposedHeaders: ["Total-Results"]
+    }
+))
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+
+    // Set other headers to secure the application
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+    res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+
+    // Continue to the next middleware
+    next();
+});
 // app.use(express.static(path.join(__dirname, './client/build')));
 
 //port
@@ -45,6 +66,7 @@ app.listen(PORT, () => {
 });
 
 //routes - End Points
+app.get("/", (req, res) => { res.json("Backend Activated.") })
 app.use("/api/v1/items", itemRoutes);
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/bills", billRoutes);
