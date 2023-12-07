@@ -30,7 +30,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors(
     {
-        origin: "*",
+        origin: "https://pos-client-lovat.vercel.app",
         credentials: "true",
         methods: "GET, POST, HEAD, PUT, PATCH, DELETE, OPTIONS",
         allowedHeaders: 'Content-Type',
