@@ -1,0 +1,28 @@
+.sales-chart {
+  background-color: var(--clr-grey-bg);
+}
+.saleHeader {
+  text-align: -webkit-center;
+}
+.table {
+  text-align: center;
+  font-size: smaller;
+  vertical-align: baseline;
+}
+
+.billForPrint {
+  padding: 10px;
+  background-color: white;
+  color: black;
+  width: 300px;
+  text-align-last: center;
+}
+.bill-footer {
+  font-size: xx-small;
+}
+.modal-body {
+  align-self: center;
+}
+.bill-credientials {
+  text-align-last: start;
+}

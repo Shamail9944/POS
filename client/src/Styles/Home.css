@@ -1,0 +1,247 @@
+/* -------------------- Home Page Layout -------------------- */
+.home-layout {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  border: none;
+  overflow: hidden;
+  background-color: var(--clr-grey-bg);
+}
+/* -------------------- Lt Nav panel -------------------- */
+.Logo-d {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lt-nav-panel {
+  position: sticky;
+  left: 0;
+  top: 0;
+  transition-duration: 600ms;
+}
+.w-ltopen {
+  width: 150px;
+}
+.w-ltclose {
+  width: 70px;
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+.Logo {
+  width: 30px;
+  margin-top: 15px;
+}
+
+.menu-items {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.scale-0 {
+  transform: scale(0);
+}
+.hidden {
+  display: none;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menu-li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.ul-list {
+  padding-left: 0px;
+}
+.li-img {
+  margin: 10px;
+}
+.li-title {
+  margin: 5px;
+  padding-bottom: 5px;
+}
+ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img.menu-items:hover {
+  color: black;
+}
+ul li:hover {
+  background-color: var(--clr-primary-orange);
+}
+
+.navbar-nav {
+  display: block;
+}
+/* .nav-fa:hover {
+  background-color: red;
+  padding: 10px;
+} */
+.fancy-text-Lt {
+  position: absolute;
+  top: 500px;
+  left: -28px;
+  transform: rotate(270deg);
+}
+.fancy-text-Lt > h5 {
+  font-size: xx-large;
+  font-variant: all-small-caps;
+  font-family: cursive;
+}
+.fancy-text-Lt > h5:hover {
+  color: royalblue;
+}
+.fancy-text-Rt > h5:hover {
+  color: yellowgreen;
+}
+.fancy-text-Rt {
+  position: absolute;
+  top: 500px;
+  right: 5px;
+  transform: rotate(90deg);
+}
+.fancy-text-Rt > h5 {
+  font-variant: all-small-caps;
+  font-family: cursive;
+  font-size: xx-large;
+  color: white;
+}
+
+.home-logo > svg {
+  color: aqua;
+}
+.sales-logo > svg {
+  color: aqua;
+}
+.admin-logo > svg {
+  color: aqua;
+}
+.logout-logo > svg {
+  color: aqua;
+}
+
+/* -------------------- Products panel -------------------- */
+.home-product-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 85vw;
+}
+.items-panel-scroll {
+  overflow-y: scroll;
+}
+.col {
+  display: flex;
+  flex: 1 0;
+  justify-content: center;
+}
+
+/* -------------------- Rt Cart panel -------------------- */
+.rt-cart-panel {
+  position: sticky;
+  right: 0;
+  top: 0;
+  transition-duration: 600ms;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.w-rtopen {
+  width: 400px;
+}
+.offcanvas.offcanvas-end {
+  width: 500px !important;
+}
+.w-rtclose {
+  width: 70px;
+}
+
+.imgLogoLt {
+  position: absolute;
+  right: -12px;
+  top: 53px;
+  background-color: var(--clr-primary-orange);
+  border-radius: 25px;
+  cursor: pointer;
+}
+.imgLogoRt {
+  position: absolute;
+  left: -12px;
+  top: 53px;
+  background-color: var(--clr-primary-orange);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.slow-mo {
+  transition-duration: 1s;
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.badge {
+  position: relative;
+  right: -45px;
+  top: -20px;
+  color: black;
+  border-radius: 50px;
+  padding: 5px;
+  font-size: 0.75em;
+  font-weight: 700;
+}
+.card-img-top {
+  width: 50px;
+  height: 50px;
+}
+.table {
+  margin-bottom: 0;
+}
+.cart-table {
+  min-height: 430px;
+  font-size: 0.75rem;
+}
+.table > caption {
+  font-size: x-small;
+}
+.payment-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+svg.svg-inline--fa.fa-xmark.mx-2 {
+  background-color: #544f4fbf;
+  padding: -3px;
+  border-radius: 43px;
+  width: 42px;
+  height: 28px;
+}
+/* -----------------------------------Top Nav ------------------------------- */
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

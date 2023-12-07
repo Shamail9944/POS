@@ -1,0 +1,7 @@
+- QR Web Cam doesnot stops - stackoverflow
+- Search product byId by mongoose model.find and display in popup and add to Cart
+- stripe paypal or razorpay intg
+- Sales Dashboard implementation a/w JS for sales analytics
+- User pic display by saving in mongodb as a text file on registration
+- direct saving files in Imagekit.io by using SDK instead of doing it manually
+- make app modular

@@ -1,0 +1,11 @@
+td {
+  text-align: -webkit-center;
+}
+.modal-content {
+  background-color: #252836;
+  color: white;
+}
+input#exampleForm\.ControlInput1,
+textarea#exampleForm\.ControlTextarea1 {
+  background-color: #212529;
+}
