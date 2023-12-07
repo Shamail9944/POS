@@ -24,7 +24,7 @@ const SalesChart = () => {
 
 
     useEffect(() => {
-        axios.get('/api/v1/bills/get-bill')
+        axios.get('https://pos-server-gules.vercel.app/api/v1/bills/get-bill')
             .then((res) => {
                 setallBills(res.data)
             })

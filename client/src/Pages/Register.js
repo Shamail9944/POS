@@ -14,7 +14,7 @@ const Register = () => {
             formDataObj = Object.fromEntries(formData.entries())
         try {
             console.log(formDataObj)
-            await axios.post('/api/v1/users/register', formDataObj).then((res) => { console.log(res.data); })
+            await axios.post('https://pos-server-gules.vercel.app/api/v1/users/register', formDataObj).then((res) => { console.log(res.data); })
             navigate("/login")
         } catch (error) {
             console.log(error);

@@ -37,7 +37,7 @@ export default ProductSlice.reducer
 //get all products from mongo db
 export const getProducts = createAsyncThunk('products/get', async () => {
     try {
-        const data = await fetch('/api/v1/items/get-item')
+        const data = await fetch('https://pos-server-gules.vercel.app/api/v1/items/get-item')
         const result = data.json()
         // console.log(result);
         return result

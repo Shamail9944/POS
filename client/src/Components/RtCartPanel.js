@@ -48,7 +48,7 @@ const RtCartPanel = () => {
     console.log(newObject)
     //Add new product
     try {
-      await axios.post('/api/v1/bills/add-bill', newObject).then((res) => { console.log(res.data); })
+      await axios.post('https://pos-server-gules.vercel.app/api/v1/bills/add-bill', newObject).then((res) => { console.log(res.data); })
       setShowOffcanvas(false)
       navigate('/sales-dashboard')
     } catch (error) {
@@ -98,7 +98,7 @@ const RtCartPanel = () => {
   //Get product by Id
   const getProductById = async (scanResult) => {
     try {
-      await axios.get(`/api/v1/items/get-item/${scanResult}`).then((res) => { console.log(res.data); setProductById(res.data) })
+      await axios.get(`https://pos-server-gules.vercel.app/api/v1/items/get-item/${scanResult}`).then((res) => { console.log(res.data); setProductById(res.data) })
 
       console.log(productById);
     } catch (error) {

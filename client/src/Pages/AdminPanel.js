@@ -74,7 +74,7 @@ const AdminPanel = () => {
     //Delete product
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`/api/v1/items/delete-item/${id}`).then((res) => { console.log(res.data); })
+            await axios.delete(`https://pos-server-gules.vercel.app/api/v1/items/delete-item/${id}`).then((res) => { console.log(res.data); })
             dispatch(getProducts())
         } catch (error) {
             console.log(error);
@@ -91,7 +91,7 @@ const AdminPanel = () => {
         if (editItem === null) {
             //Add new product
             try {
-                await axios.post('/api/v1/items/add-item', formDataObj).then((res) => { console.log(res.data); })
+                await axios.post('https://pos-server-gules.vercel.app/api/v1/items/add-item', formDataObj).then((res) => { console.log(res.data); })
                 setShowPopUp(false)
                 dispatch(getProducts())
             } catch (error) {
@@ -100,7 +100,7 @@ const AdminPanel = () => {
         } else {
             //Edit product
             try {
-                await axios.put(`/api/v1/items/edit-item/${editItem._id}`, { data: formDataObj }).then((res) => { console.log(res.data); })
+                await axios.put(`https://pos-server-gules.vercel.app/api/v1/items/edit-item/${editItem._id}`, { data: formDataObj }).then((res) => { console.log(res.data); })
                 setShowPopUp(false)
                 setEditItem(null)
                 dispatch(getProducts())

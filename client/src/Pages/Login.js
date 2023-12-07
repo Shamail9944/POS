@@ -13,7 +13,7 @@ const Login = () => {
         const formData = new FormData(e.target), formDataObj = Object.fromEntries(formData.entries())
         try {
             console.log(formDataObj)
-            await axios.post('/api/v1/users/login', formDataObj)
+            await axios.post('https://pos-server-gules.vercel.app/api/v1/users/login', formDataObj)
                 .then((res) => {
                     console.log(res.data);
                     localStorage.setItem("auth", JSON.stringify(res.data))
